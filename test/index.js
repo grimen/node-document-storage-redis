@@ -8,6 +8,8 @@ var Storage = require('node-document-storage');
 module.exports = Storage.Spec('Redis', {
   module: require('..'),
   engine: require('redis'),
+  id: 'redis',
+  protocol: 'redis',
   db: 'default-test',
   default_url: 'redis://localhost:6379/default-test',
   authorized_url: 'redis://redistogo:57c5cf5c220a6b376cf3740297e0f69f@slimehead.redistogo.com:9501/test',
@@ -54,4 +56,3 @@ module.exports = Storage.Spec('Redis', {
     }
   }
 });
-
